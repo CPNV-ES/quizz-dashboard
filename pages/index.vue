@@ -9,7 +9,12 @@
           Connectez-vous a l'interface d'administration<br> et créez/éditez des quizz !
         </h2>
         <div>
-          <a class="button is-light">Light</a>
+          <nuxt-link
+            :to="{ name: 'login' }"
+            class="button is-light">
+            <span>Se connecter !</span>
+            <b-icon icon="account"/>
+          </nuxt-link>
         </div>
       </div>
     </div>
@@ -17,21 +22,7 @@
 </template>
 
 <script>
-import BLogo from '@/components/Logo'
-
 export default {
-  layout: 'logged_out',
-  name: 'HomePage',
-  components: {BLogo},
-  data() {
-      return {
-          features: [
-              { icon: 'github-circle', title: 'Free', content: `<span>Open source on <a href="https://github.com/buefy/buefy"> GitHub</a></span>` },
-              { icon: 'cellphone-link', title: 'Responsive', content: `<span><b class="has-text-grey">Every</b> component is responsive</span>` },
-              { icon: 'alert-decagram', title: 'Modern', content: `<span>Built with <a href="https://vuejs.org/">Vue.js</a> and <a href="http://bulma.io/">Bulma</a></span>` },
-              { icon: 'arrange-bring-to-front', title: 'Lightweight', content: `<span>No other internal dependency</span>` }
-          ]
-      }
-  }
+  layout: 'logged_out'
 }
 </script>

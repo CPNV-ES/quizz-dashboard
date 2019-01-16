@@ -1,29 +1,15 @@
 <template>
-  <section class="section">
-    <div class="columns is-mobile">
-      <div
-        v-for="(feature, i) of features"
-        :key="i"
-        class="column">
-        <div class="card">
-          <header class="card-header">
-            <p class="card-header-title has-text-grey">
-              {{ feature.title }}
-            </p>
-          </header>
-          <div class="card-content">
-            <div class="content has-text-centered">
-              <b-icon
-                :icon="feature.icon"
-                size="is-large"
-                type="is-primary"/>
-            </div>
-          </div>
-          <footer class="card-footer">
-            <div
-              class="card-footer-item"
-              v-html="feature.content"/>
-          </footer>
+  <section class="hero is-success is-fullheight">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          QUIZZ - dashboard
+        </h1>
+        <h2 class="subtitle">
+          Connectez-vous a l'interface d'administration<br> et créez/éditez des quizz !
+        </h2>
+        <div>
+          <a class="button is-light">Light</a>
         </div>
       </div>
     </div>
@@ -34,6 +20,7 @@
 import BLogo from '@/components/Logo'
 
 export default {
+  layout: 'logged_out',
   name: 'HomePage',
   components: {BLogo},
   data() {

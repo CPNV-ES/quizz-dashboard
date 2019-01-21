@@ -1,5 +1,5 @@
 <template>
-  <section class="hero is-light is-bold is-fullheight">
+  <section class="hero is-info is-bold is-fullheight">
     <div class="hero-body">
       <div class="container">
         <h1 class="title">
@@ -31,7 +31,7 @@
                 expanded/>
               <p class="control">
                 <button
-                  class="button is-info is-medium"
+                  class="button is-dark is-medium"
                   @click="logIn()">
                   GO !
                 </button>
@@ -69,7 +69,8 @@ export default {
             message: `Connexion réussie, bienvenue !`,
             type: 'is-success'
         })
-        this.$router.push({ name: 'dashboard' })
+        this.$axios.setHeader('quizz-token', data.token)
+        this.$router.push({ name: 'dashboard'})
       } catch (e) {
         if (e.response) {
           this.$toast.open({
@@ -84,7 +85,6 @@ export default {
               type: 'is-danger'
           })
         }
-        console.log(e.response.status)
       } finally {
         this.loading = false
       }

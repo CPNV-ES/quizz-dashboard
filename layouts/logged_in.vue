@@ -18,9 +18,11 @@
               Liste des quizz
             </nuxt-link>
 
-            <a class="navbar-item">
+            <nuxt-link
+              :to="{ name: 'dashboard-questions-list'}"
+              class="navbar-item">
               Listes des questions
-            </a>
+            </nuxt-link>
 
           </div>
 

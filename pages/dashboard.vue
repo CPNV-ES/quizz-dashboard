@@ -1,9 +1,5 @@
 <template>
-  <div class="columns">
-    <div class="column is-12">
-      <h1>Dashboard</h1>
-    </div>
-  </div>
+  <nuxt-child/>
 </template>
 
 <script>

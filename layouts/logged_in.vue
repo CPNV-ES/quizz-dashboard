@@ -5,31 +5,40 @@
       role="navigation"
       aria-label="main navigation">
 
-      <div
-        id="navbarBasicExample"
-        class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item">
-            Listes des quizz
-          </a>
+      <div class="container">
 
-          <a class="navbar-item">
-            Documentation
-          </a>
-        </div>
+        <div
+          id="navbarBasicExample"
+          class="navbar-menu">
+          <div class="navbar-start">
 
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="buttons">
-              <a class="button is-dark">
-                Se deconnecter
-              </a>
+            <nuxt-link
+              :to="{ name: 'dashboard-quizzes-list'}"
+              class="navbar-item">
+              Liste des quizz
+            </nuxt-link>
+
+            <a class="navbar-item">
+              Listes des questions
+            </a>
+
+          </div>
+
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-dark">
+                  Se deconnecter
+                </a>
+              </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
+
     </nav>
+
     <nuxt/>
   </div>
 </template>

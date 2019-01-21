@@ -18,6 +18,10 @@ module.exports = {
     ]
   },
 
+  router: {
+    linkActiveClass: 'is-active'
+  },
+
   /*
   ** Customize the progress-bar color
   */

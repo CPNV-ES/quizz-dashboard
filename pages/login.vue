@@ -70,12 +70,12 @@ export default {
             type: 'is-success'
         })
         this.$axios.setHeader('quizz-token', data.token)
-        this.$router.push({ name: 'dashboard'})
+        this.$router.push({ name: 'dashboard-quizzes-list'})
       } catch (e) {
         if (e.response) {
           this.$toast.open({
               duration: 5000,
-              message: `Nom d'utilisateur ou mot de passe inconnu`,
+              message: `Nom d'utilisateur ou mot de passe inconnu.`,
               type: 'is-warning'
           })
         } else {

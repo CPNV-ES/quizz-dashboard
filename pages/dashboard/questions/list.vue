@@ -14,15 +14,17 @@
               <li
                 v-for="answer of question.answers"
                 :key="answer.name">
-                <p
-                  v-if="answer.value == true"
-                  class="has-text-success">
-                  {{ answer.name }}
+                <p v-if="answer.value == 'true'">
+                  <strong
+                    class="has-text-success">
+                    {{ answer.name }}
+                  </strong>
                 </p>
-                <p
-                  v-else
-                  class="has-text-error">
-                  {{ answer.name }}
+                <p v-else>
+                  <strong
+                    class="has-text-error">
+                    {{ answer.name }}
+                  </strong>
                 </p>
               </li>
             </ul>

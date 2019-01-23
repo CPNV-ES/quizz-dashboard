@@ -29,7 +29,9 @@
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="buttons">
-                <a class="button is-dark">
+                <a
+                  class="button is-dark"
+                  @click="logOut()">
                   Se deconnecter
                 </a>
               </div>
@@ -44,3 +46,20 @@
     <nuxt/>
   </div>
 </template>
+
+<script>
+export default {
+  middleware: 'auth',
+  methods: {
+    async logOut () {
+      localStorage.removeItem('quizz-token')
+      this.$toast.open({
+          duration: 3000,
+          message: `Vous avez correctement été déconnecté !`,
+          type: 'is-success'
+      })
+      this.$router.push({ name: 'index'})
+    }
+  }
+}
+</script>

@@ -60,16 +60,17 @@ export default {
     async logIn () {
       try {
         this.loading = true
+        // Login route
         let data = await this.$axios.$post('/api/login', {
           username: this.username,
           password: this.password
         })
+        localStorage.setItem('quizz-token', data.token)
         this.$toast.open({
             duration: 3000,
             message: `Connexion réussie, bienvenue !`,
             type: 'is-success'
         })
-        this.$axios.setHeader('quizz-token', data.token)
         this.$router.push({ name: 'dashboard-quizzes-list'})
       } catch (e) {
         if (e.response) {

@@ -14,8 +14,16 @@
         <nav class="tabs is-boxed">
           <div class="container">
             <ul>
-              <li class="is-active"><a>Tous</a></li>
-              <li><a>Créer</a></li>
+              <nuxt-link
+                :to="{ name: 'dashboard-quizzes-list'}"
+                tag="li">
+                <a>Tous</a>
+              </nuxt-link>
+              <nuxt-link
+                :to="{ name: 'dashboard-quizzes-create'}"
+                tag="li">
+                <a>Créer un quizz</a>
+              </nuxt-link>
             </ul>
           </div>
         </nav>

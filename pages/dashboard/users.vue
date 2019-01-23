@@ -1,11 +1,11 @@
 <template>
-  <div id="questions">
-    <section class="hero is-success is-bold">
+  <div id="quizzes">
+    <section class="hero is-warning is-bold">
 
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
-            Les Questions
+            Utilisateurs
           </h1>
         </div>
       </div>
@@ -15,14 +15,9 @@
           <div class="container">
             <ul>
               <nuxt-link
-                :to="{ name: 'dashboard-questions-list'}"
+                :to="{ name: 'dashboard-users-list'}"
                 tag="li">
-                <a>Liste</a>
-              </nuxt-link>
-              <nuxt-link
-                :to="{ name: 'dashboard-questions-create'}"
-                tag="li">
-                <a>Créer une question</a>
+                <a>Tous</a>
               </nuxt-link>
             </ul>
           </div>

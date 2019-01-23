@@ -1,6 +1,6 @@
 <template>
   <div id="quizzes">
-    <section class="hero is-info">
+    <section class="hero is-info is-bold">
 
       <div class="hero-body">
         <div class="container">

@@ -24,6 +24,12 @@
               Listes des questions
             </nuxt-link>
 
+            <nuxt-link
+              :to="{ name: 'dashboard-users-list'}"
+              class="navbar-item">
+              Utilisateurs
+            </nuxt-link>
+
           </div>
 
           <div class="navbar-end">

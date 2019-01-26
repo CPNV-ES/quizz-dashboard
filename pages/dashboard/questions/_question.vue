@@ -8,9 +8,25 @@
             <b-field label="Question :">
               <b-input
                 v-model="question.question"
-                size="is-large"
-                value="Kevin Garvey"/>
+                size="is-large"/>
             </b-field>
+          </div>
+        </div>
+        <!-- Picture -->
+        <div class="columns">
+          <div class="column is-9">
+            <b-field
+              label="Image"
+              message="Doit être un url valide vers une image.">
+              <b-input
+                v-model="question.image"/>
+            </b-field>
+          </div>
+          <div class="column is-3">
+            <figure class="box">
+              <img
+                :src="question.image">
+            </figure>
           </div>
         </div>
         <!-- Add answer -->

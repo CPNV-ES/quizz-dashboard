@@ -64,6 +64,16 @@
             </b-field>
           </div>
         </div>
+        <div class="columns is-centered">
+          <div class="column is-narrow">
+            <button
+              class="button is-success"
+              @click="saveQuestion()">
+              <b-icon icon="content-save"/>
+              <span>Sauvegarder</span>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -95,6 +105,23 @@ export default {
     },
     flipAnswer (index) {
       this.question.answers[index].value = !this.question.answers[index].value
+    },
+    async saveQuestion () {
+      try {
+        await this.$axios.$patch(`/api/questions/${this.question.id}`, this.question)
+        this.$toast.open({
+            duration: 3000,
+            message: `Question correctement sauvegardée !`,
+            type: 'is-success'
+        })
+      } catch (e) {
+        console.error(e)
+        this.$toast.open({
+          duration: 5000,
+          message: `Une erreur est survenue, le serveur est inacsesible !`,
+          type: 'is-danger'
+        })
+      }
     }
   }
 }

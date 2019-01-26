@@ -15,13 +15,13 @@
             <nuxt-link
               :to="{ name: 'dashboard-quizzes-list'}"
               class="navbar-item">
-              Liste des quizz
+              Quizzes
             </nuxt-link>
 
             <nuxt-link
               :to="{ name: 'dashboard-questions-list'}"
               class="navbar-item">
-              Listes des questions
+              Questions
             </nuxt-link>
 
             <nuxt-link

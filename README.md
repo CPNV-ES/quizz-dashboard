@@ -1,6 +1,7 @@
 # quizz-dashboard
 
 > Dashboard for cpnv quizz app.
+> **[Demo here]()
 
 ## Build Setup
 
@@ -19,4 +20,10 @@ $ yarn start
 $ yarn run generate
 ```
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+## Tools / frameworks
+
+* [Vue](https://vuejs.org/v2/guide/)
+* [Nuxt.js docs](https://nuxtjs.org).
+* [Axios nuxt module](https://axios.nuxtjs.org)
+* [Buefy](https://buefy.github.io)
+* [Bulma](https://bulma.io)

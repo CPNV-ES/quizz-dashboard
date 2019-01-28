@@ -9,7 +9,7 @@
           <span
             v-for="answer of question.answers"
             :key="answer.name"
-            :class="{ 'is-success': answer.value == 'true' }"
+            :class="{ 'is-success': answer.value == true || answer.value == 'true' }"
             class="tag">
             {{ answer.name }}
           </span>
@@ -31,10 +31,13 @@
         </nuxt-link>
       </p>
       <p class="control">
-        <a class="button is-danger">
+        <button
+          :class="{ 'is-loading': loading }"
+          class="button is-danger"
+          @click="removeQuestion()">
           <b-icon icon="delete"/>
           <span>Supprimer</span>
-        </a>
+        </button>
       </p>
     </div>
   </div>
@@ -46,6 +49,34 @@ export default {
     question: {
       type: Object,
       required: true
+    }
+  },
+  data () {
+    return {
+      loading: false
+    }
+  },
+  methods: {
+    async removeQuestion () {
+      try {
+        this.loading = true
+        await this.$axios.$delete(`/api/questions/${this.question.id}`)
+        this.$toast.open({
+            duration: 3000,
+            message: `La question à bien été supprimée !`,
+            type: 'is-success'
+        })
+        this.$emit('questionDeleted')
+      } catch (e) {
+        console.error(e)
+        this.$toast.open({
+          duration: 5000,
+          message: `Une erreur est survenue, le serveur est inacsesible !`,
+          type: 'is-danger'
+        })
+      } finally {
+        this.loading = false
+      }
     }
   }
 }

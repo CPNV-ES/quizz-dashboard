@@ -135,6 +135,7 @@ export default {
             message: `Question correctement créee !`,
             type: 'is-success'
         })
+        this.$router.push({ name: 'dashboard-questions-list'})
       } catch (e) {
         console.error(e)
         this.$toast.open({

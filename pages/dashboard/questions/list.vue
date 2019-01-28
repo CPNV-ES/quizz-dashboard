@@ -4,7 +4,8 @@
       <QuestionBox
         v-for="question of questions"
         :key="question.id"
-        :question="question"/>
+        :question="question"
+        @questionDeleted="removeQuestion(question.id)"/>
     </div>
   </div>
 </template>
@@ -19,6 +20,11 @@ export default {
   async asyncData ({ $axios }) {
     let datas = await $axios.$get('/api/questions')
     return { questions: datas.questions }
+  },
+  methods: {
+    removeQuestion (id) {
+      this.questions = this.questions.filter(e => e.id != id)
+    }
   }
 }
 </script>

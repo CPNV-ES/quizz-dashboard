@@ -70,16 +70,16 @@ export default {
     }
   },
   methods: {
-    async removeQuestion () {
+    async removeQuizz () {
       try {
         this.loading = true
-        await this.$axios.$delete(`/api/questions/${this.question.id}`)
+        await this.$axios.$delete(`/api/quizzes/${this.quizz.id}`)
         this.$toast.open({
             duration: 3000,
-            message: `La question à bien été supprimée !`,
+            message: `Le quizz à bien été supprimée !`,
             type: 'is-success'
         })
-        this.$emit('questionDeleted')
+        this.$emit('quizzDeleted')
       } catch (e) {
         console.error(e)
         this.$toast.open({

@@ -4,7 +4,8 @@
       <QuizzBox
         v-for="quizz of quizzes"
         :key="quizz.id"
-        :quizz="quizz"/>
+        :quizz="quizz"
+        @quizzDeleted="removeQuizz(quizz.id)"/>
     </div>
   </div>
 </template>
@@ -17,6 +18,11 @@ export default {
   async asyncData ({ $axios }) {
     let datas = await $axios.$get('/api/quizzes')
     return { quizzes: datas.quizzes }
+  },
+  methods: {
+    removeQuizz (id) {
+      this.quizzes = this.quizzes.filter(e => e.id != id)
+    }
   }
 }
 </script>

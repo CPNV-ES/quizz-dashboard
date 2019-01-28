@@ -3,6 +3,12 @@
     <div class="container">
       <div class="box">
         <div class="columns">
+          <div class="column is-3">
+            <img
+              :src="quizz.image"
+              :alt="quizz.tile"
+              width="100%">
+          </div>
           <div class="column">
             <h2 class="title">
               {{ quizz.title }}
@@ -11,10 +17,18 @@
               {{ quizz.description }}
             </p>
           </div>
-          <div class="column is-2">
+          <div class="column is-narrow">
             <p class="has-text-right">
               Crée par : <strong>{{ quizz.created_by }}</strong>
             </p>
+          </div>
+          <div class="column is-narrow">
+            <nuxt-link
+              :to="{ name: 'dashboard-quizzes-quizz-edit', params: { quizz: quizz.id }}"
+              class="button is-info">
+              <b-icon icon="magnify"/>
+              <span>Modifier</span>
+            </nuxt-link>
           </div>
         </div>
         <!-- List of questions -->

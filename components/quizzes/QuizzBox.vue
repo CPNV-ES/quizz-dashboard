@@ -28,7 +28,7 @@
           <p class="control">
             <nuxt-link
               :to="{ name: 'dashboard-quizzes-quizz', params: { quizz: quizz.id }}"
-              class="button is-info">
+              class="button is-link">
               <b-icon icon="magnify"/>
               <span>Détails</span>
             </nuxt-link>

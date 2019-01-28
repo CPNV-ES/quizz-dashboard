@@ -91,11 +91,9 @@ export default {
       console.log(this.quizz.questions.includes(id))
       if (this.quizz.questions.includes(id)) {
         // Remove the element
-        console.log('remove element')
         this.quizz.questions = this.quizz.questions.filter(e => e != id)
       } else {
         // Add the question to the array
-        console.log('add element')
         this.quizz.questions.push(id)
       }
     },

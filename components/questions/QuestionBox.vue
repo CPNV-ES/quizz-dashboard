@@ -15,7 +15,9 @@
           </span>
         </div>
       </div>
-      <div class="column is-3">
+      <div
+        v-if="question.created_by"
+        class="column is-3">
         <p class="has-text-right">
           Crée par : <strong>{{ question.created_by.username }}</strong>
         </p>

@@ -5,7 +5,8 @@
         v-for="question of questions"
         :key="question.id"
         :question="question"
-        @questionDeleted="removeQuestion(question.id)"/>
+        @questionDeleted="removeQuestion(question.id)"
+      />
     </div>
   </div>
 </template>

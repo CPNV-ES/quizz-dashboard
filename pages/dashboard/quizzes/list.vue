@@ -5,7 +5,8 @@
         v-for="quizz of quizzes"
         :key="quizz.id"
         :quizz="quizz"
-        @quizzDeleted="removeQuizz(quizz.id)"/>
+        @quizzDeleted="removeQuizz(quizz.id)"
+      />
     </div>
   </div>
 </template>

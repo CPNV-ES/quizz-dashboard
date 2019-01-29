@@ -10,14 +10,16 @@
             v-for="answer of question.answers"
             :key="answer.name"
             :class="{ 'is-success': answer.value == true || answer.value == 'true' }"
-            class="tag">
+            class="tag"
+          >
             {{ answer.name }}
           </span>
         </div>
       </div>
       <div
         v-if="question.created_by"
-        class="column is-3">
+        class="column is-3"
+      >
         <p class="has-text-right">
           Crée par : <strong>{{ question.created_by.username }}</strong>
         </p>
@@ -27,8 +29,9 @@
       <p class="control">
         <nuxt-link
           :to="{ name: 'dashboard-questions-question', params: { question: question.id }}"
-          class="button is-info">
-          <b-icon icon="content-copy"/>
+          class="button is-info"
+        >
+          <b-icon icon="content-copy" />
           <span>Modifier</span>
         </nuxt-link>
       </p>
@@ -36,8 +39,9 @@
         <button
           :class="{ 'is-loading': loading }"
           class="button is-danger"
-          @click="removeQuestion()">
-          <b-icon icon="delete"/>
+          @click="removeQuestion()"
+        >
+          <b-icon icon="delete" />
           <span>Supprimer</span>
         </button>
       </p>

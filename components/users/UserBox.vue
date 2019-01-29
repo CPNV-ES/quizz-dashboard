@@ -7,28 +7,35 @@
       <div class="tags are-medium">
         <span
           v-if="user.admin"
-          class="tag is-link">
+          class="tag is-link"
+        >
           Administrateur
         </span>
         <span
           v-if="user.creator"
-          class="tag is-info">
+          class="tag is-info"
+        >
           Créateur
         </span>
         <span
           v-if="user.guest"
-          class="tag is-primary">
+          class="tag is-primary"
+        >
           Invité
         </span>
       </div>
-      <h3 class="title is-6">Ajouter un role</h3>
+      <h3 class="title is-6">
+        Ajouter un role
+      </h3>
       <b-field>
         <p class="control">
           <b-dropdown
-            v-model="role">
+            v-model="role"
+          >
             <button
               slot="trigger"
-              class="button">
+              class="button"
+            >
               <template v-if="role == 'admin'">
                 <span>Administrateur</span>
               </template>
@@ -41,19 +48,26 @@
               <template v-else>
                 <span>Selectionnez</span>
               </template>
-              <b-icon icon="menu-down"/>
+              <b-icon icon="menu-down" />
             </button>
-            <b-dropdown-item value="admin">Administrateur</b-dropdown-item>
-            <b-dropdown-item value="creator">Créateur</b-dropdown-item>
-            <b-dropdown-item value="guest">Invité</b-dropdown-item>
+            <b-dropdown-item value="admin">
+              Administrateur
+            </b-dropdown-item>
+            <b-dropdown-item value="creator">
+              Créateur
+            </b-dropdown-item>
+            <b-dropdown-item value="guest">
+              Invité
+            </b-dropdown-item>
           </b-dropdown>
         </p>
         <p class="control">
           <button
             :loading="loading"
             class="button is-dark"
-            @click="addRole()">
-            <b-icon icon="plus-box"/>
+            @click="addRole()"
+          >
+            <b-icon icon="plus-box" />
             <span>Ajouter</span>
           </button>
         </p>

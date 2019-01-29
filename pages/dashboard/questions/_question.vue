@@ -8,7 +8,8 @@
             <b-field label="Question :">
               <b-input
                 v-model="question.question"
-                size="is-large"/>
+                size="is-large"
+              />
             </b-field>
           </div>
         </div>
@@ -17,28 +18,34 @@
           <div class="column is-9">
             <b-field
               label="Image"
-              message="Doit être un url valide vers une image.">
+              message="Doit être un url valide vers une image."
+            >
               <b-input
-                v-model="question.image"/>
+                v-model="question.image"
+              />
             </b-field>
           </div>
           <div class="column is-3">
             <figure class="box">
               <img
-                :src="question.image">
+                :src="question.image"
+              >
             </figure>
           </div>
         </div>
         <!-- Add answer -->
         <div class="columns">
           <div class="column">
-            <h3 class="title is-6">Réponces :</h3>
+            <h3 class="title is-6">
+              Réponces :
+            </h3>
           </div>
           <div class="column is-narrow">
             <button
               class="button is-info"
-              @click="addAnswer()">
-              <b-icon icon="plus-box"/>
+              @click="addAnswer()"
+            >
+              <b-icon icon="plus-box" />
               <span>Ajouter</span>
             </button>
           </div>
@@ -48,33 +55,38 @@
           <div
             v-for="(item, index) in question.answers"
             :key="index"
-            class="column is-12">
+            class="column is-12"
+          >
             <b-field grouped>
               <b-input
                 v-model="question.answers[index].name"
                 placeholder="Reponce"
-                expanded/>
+                expanded
+              />
               <p class="control">
                 <button
                   v-if="question.answers[index].value === true || question.answers[index].value === 'true'"
                   class="button is-success"
-                  @click="flipAnswer(index)">
-                  <b-icon icon="checkbox-marked"/>
+                  @click="flipAnswer(index)"
+                >
+                  <b-icon icon="checkbox-marked" />
                   <span>Répnse correcte</span>
                 </button>
                 <button
                   v-else
                   class="button is-danger"
-                  @click="flipAnswer(index)">
-                  <b-icon icon="close-box"/>
+                  @click="flipAnswer(index)"
+                >
+                  <b-icon icon="close-box" />
                   <span>Répnse fause</span>
                 </button>
               </p>
               <p class="control">
                 <button
                   class="button is-danger"
-                  @click="removeAnswer(index)">
-                  <b-icon icon="delete"/>
+                  @click="removeAnswer(index)"
+                >
+                  <b-icon icon="delete" />
                 </button>
               </p>
             </b-field>
@@ -84,8 +96,9 @@
           <div class="column is-narrow">
             <button
               class="button is-success"
-              @click="saveQuestion()">
-              <b-icon icon="content-save"/>
+              @click="saveQuestion()"
+            >
+              <b-icon icon="content-save" />
               <span>Sauvegarder</span>
             </button>
           </div>

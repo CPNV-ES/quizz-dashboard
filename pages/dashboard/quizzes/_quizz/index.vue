@@ -7,7 +7,8 @@
             <img
               :src="quizz.image"
               :alt="quizz.tile"
-              width="100%">
+              width="100%"
+            >
           </div>
           <div class="column">
             <h2 class="title">
@@ -25,8 +26,9 @@
           <div class="column is-narrow">
             <nuxt-link
               :to="{ name: 'dashboard-quizzes-quizz-edit', params: { quizz: quizz.id }}"
-              class="button is-info">
-              <b-icon icon="magnify"/>
+              class="button is-info"
+            >
+              <b-icon icon="magnify" />
               <span>Modifier</span>
             </nuxt-link>
           </div>
@@ -34,14 +36,17 @@
         <!-- List of questions -->
         <div class="columns">
           <div class="column">
-            <h3 class="title is-6">Questions du quizz :</h3>
+            <h3 class="title is-6">
+              Questions du quizz :
+            </h3>
           </div>
         </div>
         <div class="columns is-multiline">
           <div
             v-for="question of quizz.questions"
             :key="question.id"
-            class="column is-6">
+            class="column is-6"
+          >
             <span class="tag is-light">
               {{ question.question }}
             </span>
@@ -53,12 +58,7 @@
 </template>
 
 <script>
-import QuestionBox from '@/components/questions/QuestionBox'
-
 export default {
-  components: {
-    QuestionBox
-  },
   async asyncData ({ $axios, params }) {
     let datas = await $axios.$get(`/api/quizzes/${params.quizz}`)
     return { quizz: datas }

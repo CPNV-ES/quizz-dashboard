@@ -8,7 +8,8 @@
             <b-field label="Titre du quizz :">
               <b-input
                 v-model="quizz.title"
-                size="is-large"/>
+                size="is-large"
+              />
             </b-field>
           </div>
         </div>
@@ -16,12 +17,14 @@
         <div class="columns">
           <div class="column">
             <b-field
-              label="Description :">
+              label="Description :"
+            >
               <b-input
                 v-model="quizz.description"
                 size="is-medium"
                 maxlength="200"
-                type="textarea"/>
+                type="textarea"
+              />
             </b-field>
           </div>
         </div>
@@ -30,33 +33,40 @@
           <div class="column is-9">
             <b-field
               label="Image"
-              message="Doit être un url valide vers une image.">
+              message="Doit être un url valide vers une image."
+            >
               <b-input
-                v-model="quizz.image"/>
+                v-model="quizz.image"
+              />
             </b-field>
           </div>
           <div class="column is-3">
             <figure class="box">
               <img
-                :src="quizz.image">
+                :src="quizz.image"
+              >
             </figure>
           </div>
         </div>
         <!-- List of questions -->
         <div class="columns">
           <div class="column">
-            <h3 class="title is-6">Selectionnez les questions <i>deux minimum</i> :</h3>
+            <h3 class="title is-6">
+              Selectionnez les questions <i>deux minimum</i> :
+            </h3>
           </div>
         </div>
         <div class="columns is-multiline">
           <div
             v-for="question of questions"
             :key="question.id"
-            class="column is-4">
+            class="column is-4"
+          >
             <button
               :class="{ 'is-success': quizz.questions.includes(question.id) }"
               class="button is-light is-small"
-              @click="selectQuestion(question.id)">
+              @click="selectQuestion(question.id)"
+            >
               {{ question.question }}
             </button>
           </div>
@@ -66,8 +76,9 @@
           <div class="column is-narrow">
             <button
               class="button is-success"
-              @click="saveQuizz()">
-              <b-icon icon="content-save"/>
+              @click="saveQuizz()"
+            >
+              <b-icon icon="content-save" />
               <span>Sauvegarder</span>
             </button>
           </div>

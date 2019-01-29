@@ -5,7 +5,8 @@
         <UserBox
           v-for="user of users"
           :key="user.id"
-          :user="user"/>
+          :user="user"
+        />
       </div>
     </div>
   </div>

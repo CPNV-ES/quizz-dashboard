@@ -5,7 +5,8 @@
         <img
           :src="quizz.image"
           :alt="quizz.tile"
-          width="100%">
+          width="100%"
+        >
       </div>
       <div class="column">
         <h2 class="title">
@@ -22,22 +23,24 @@
       </div>
     </div>
     <div class="columns">
-      <div class="column"/>
+      <div class="column" />
       <div class="column is-narrow">
         <div class="field has-addons">
           <p class="control">
             <nuxt-link
               :to="{ name: 'dashboard-quizzes-quizz', params: { quizz: quizz.id }}"
-              class="button is-link">
-              <b-icon icon="magnify"/>
+              class="button is-link"
+            >
+              <b-icon icon="magnify" />
               <span>Détails</span>
             </nuxt-link>
           </p>
           <p class="control">
             <nuxt-link
               :to="{ name: 'dashboard-quizzes-quizz-edit', params: { quizz: quizz.id }}"
-              class="button is-info">
-              <b-icon icon="content-copy"/>
+              class="button is-info"
+            >
+              <b-icon icon="content-copy" />
               <span>Modifier</span>
             </nuxt-link>
           </p>
@@ -45,8 +48,9 @@
             <button
               :class="{ 'is-loading': loading }"
               class="button is-danger"
-              @click="removeQuizz()">
-              <b-icon icon="delete"/>
+              @click="removeQuizz()"
+            >
+              <b-icon icon="delete" />
               <span>Supprimer</span>
             </button>
           </p>

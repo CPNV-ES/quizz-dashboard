@@ -6,20 +6,20 @@
           Connexion
         </h1>
         <div class="columns">
-
           <div class="column is-half">
-
             <b-field>
               <b-input
                 v-model="username"
                 :loading="loading"
                 placeholder="Nom d'utilisateur"
                 icon="account"
-                size="is-medium"/>
+                size="is-medium"
+              />
             </b-field>
 
             <b-field
-              grouped>
+              grouped
+            >
               <b-input
                 v-model="password"
                 :loading="loading"
@@ -28,18 +28,18 @@
                 icon="lock"
                 value="iwantmytreasure"
                 size="is-medium"
-                expanded/>
+                expanded
+              />
               <p class="control">
                 <button
                   class="button is-dark is-medium"
-                  @click="logIn()">
+                  @click="logIn()"
+                >
                   GO !
                 </button>
               </p>
             </b-field>
-
           </div>
-
         </div>
       </div>
     </div>

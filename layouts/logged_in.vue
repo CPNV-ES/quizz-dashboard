@@ -3,33 +3,34 @@
     <nav
       class="navbar is-light"
       role="navigation"
-      aria-label="main navigation">
-
+      aria-label="main navigation"
+    >
       <div class="container">
-
         <div
           id="navbarBasicExample"
-          class="navbar-menu">
+          class="navbar-menu"
+        >
           <div class="navbar-start">
-
             <nuxt-link
               :to="{ name: 'dashboard-quizzes-list'}"
-              class="navbar-item">
+              class="navbar-item"
+            >
               Quizzes
             </nuxt-link>
 
             <nuxt-link
               :to="{ name: 'dashboard-questions-list'}"
-              class="navbar-item">
+              class="navbar-item"
+            >
               Questions
             </nuxt-link>
 
             <nuxt-link
               :to="{ name: 'dashboard-users-list'}"
-              class="navbar-item">
+              class="navbar-item"
+            >
               Utilisateurs
             </nuxt-link>
-
           </div>
 
           <div class="navbar-end">
@@ -37,19 +38,18 @@
               <div class="buttons">
                 <a
                   class="button is-dark"
-                  @click="logOut()">
+                  @click="logOut()"
+                >
                   Se deconnecter
                 </a>
               </div>
             </div>
           </div>
-
         </div>
       </div>
-
     </nav>
 
-    <nuxt/>
+    <nuxt />
   </div>
 </template>
 

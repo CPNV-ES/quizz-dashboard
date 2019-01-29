@@ -11,9 +11,10 @@
         <div>
           <nuxt-link
             :to="{ name: 'login' }"
-            class="button is-light">
+            class="button is-light"
+          >
             <span>Se connecter !</span>
-            <b-icon icon="account"/>
+            <b-icon icon="account" />
           </nuxt-link>
         </div>
       </div>

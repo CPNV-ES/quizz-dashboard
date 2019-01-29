@@ -1,7 +1,6 @@
 <template>
   <div id="questions">
     <section class="hero is-success is-bold">
-
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
@@ -16,12 +15,14 @@
             <ul>
               <nuxt-link
                 :to="{ name: 'dashboard-questions-list'}"
-                tag="li">
+                tag="li"
+              >
                 <a>Liste</a>
               </nuxt-link>
               <nuxt-link
                 :to="{ name: 'dashboard-questions-create'}"
-                tag="li">
+                tag="li"
+              >
                 <a>Créer une question</a>
               </nuxt-link>
             </ul>
@@ -29,6 +30,6 @@
         </nav>
       </div>
     </section>
-    <nuxt-child/>
+    <nuxt-child />
   </div>
 </template>

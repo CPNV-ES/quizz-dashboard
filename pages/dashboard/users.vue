@@ -1,7 +1,6 @@
 <template>
   <div id="quizzes">
     <section class="hero is-warning is-bold">
-
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
@@ -16,7 +15,8 @@
             <ul>
               <nuxt-link
                 :to="{ name: 'dashboard-users-list'}"
-                tag="li">
+                tag="li"
+              >
                 <a>Tous</a>
               </nuxt-link>
             </ul>
@@ -24,6 +24,6 @@
         </nav>
       </div>
     </section>
-    <nuxt-child/>
+    <nuxt-child />
   </div>
 </template>

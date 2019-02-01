@@ -55,3 +55,9 @@ On retrouve deux pages dans cette partie :
 Cette partie est accesible uniquement une fois connecté, voir [système de login](./systeme_de_login.md) pour plus de détails sur la procédure de connexion.
 Cette partie utilise le layout [logged_in](../layouts/logged_in.vue) qui définis juste une navigation commune a toute les pages du dasboard.
 Toutes les pages du dasboard, nesseitent d'être authentifié, c'est ici qu'on retrouve les diférentes pages pour créer/modifier les quizz et questions.
+
+
+## La méthode asyncData
+
+Dans plusieurs composants une methode asyncData est utilisée. Cette methode sert a récuperer les données (depusi l'api) que l'on souhaite afficher par la suite.
+L'avantage de l'utiliser (a la place d'un hook dans la methode mounted) c'est que l'appel ajax va être effectué durant le routing vers la nouvelle page, ainsi les données seront déja disponibles lorsque le composant sera monté dans la vue, ce qui evite les petits moment de vide (le composant est monté mais sans données).

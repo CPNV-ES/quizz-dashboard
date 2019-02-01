@@ -1,9 +1,8 @@
 # quizz-dashboard
 
 > Dashboard for cpnv quizz app.
-> **[Demo here]()
 
-## Build Setup
+## Installation / Build Setup
 
 ``` bash
 # install dependencies
@@ -19,6 +18,10 @@ $ yarn start
 # generate static project
 $ yarn run generate
 ```
+
+## Docs
+
+You find project documentation in the [docs](./docs) folder.
 
 ## Tools / frameworks
 

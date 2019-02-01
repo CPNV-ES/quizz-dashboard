@@ -73,6 +73,7 @@ export default {
         })
         this.$router.push({ name: 'dashboard-quizzes-list'})
       } catch (e) {
+        // Check http error
         if (e.response) {
           this.$toast.open({
               duration: 5000,

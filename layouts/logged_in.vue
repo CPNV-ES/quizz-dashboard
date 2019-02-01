@@ -57,6 +57,9 @@
 export default {
   middleware: 'auth',
   methods: {
+    /**
+     * User logout
+     */
     async logOut () {
       localStorage.removeItem('quizz-token')
       this.$toast.open({

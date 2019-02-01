@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{177:function(t,e,n){"use strict";n.r(e);var s=n(9),i=Object(s.a)({},function(){var t=this.$createElement;return(this._self._c||t)("h1",{staticClass:"title is-1"},[this._v("Dashboard index")])},[],!1,null,null,null);i.options.__file="index.vue";e.default=i.exports}}]);

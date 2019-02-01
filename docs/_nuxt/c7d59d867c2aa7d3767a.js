@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{181:function(e,n,t){"use strict";t.r(n);var u=t(9),i=Object(u.a)({},function(){var e=this.$createElement;return(this._self._c||e)("h1",[this._v("Créer un quizz")])},[],!1,null,null,null);i.options.__file="create.vue";n.default=i.exports}}]);
